@@ -9,7 +9,7 @@
 
 **Language:** English | [Русский](docs/README.ru.md) | [中文](docs/README.zh.md)
 
-AI Document Analyst is a production-style MVP for analyzing documents with search, grounded Q&A, citations, and summaries. It is built as a real document intelligence pipeline, not just a thin "chat with PDF" wrapper.
+AI Document Analyst is a document analysis service for uploading source files, indexing their content, searching relevant fragments, asking grounded questions, and generating summaries.
 
 ![AI Document Analyst dashboard](docs/assets/dashboard-screenshot.png)
 
@@ -24,9 +24,9 @@ AI Document Analyst is a production-style MVP for analyzing documents with searc
 - 🗑️ Delete documents from the library, including DB records and vector entries
 - 🐳 Run the whole stack with Docker Compose
 
-## 🧭 Why This Project Matters
+## 🧭 Overview
 
-Many AI demos stop at sending a PDF into an LLM. This project goes further and shows the pieces that a practical document AI system needs:
+The application is organized as a document intelligence pipeline:
 
 - ingestion and parsing
 - chunking with source metadata
@@ -34,9 +34,7 @@ Many AI demos stop at sending a PDF into an LLM. This project goes further and s
 - hybrid retrieval with lexical support
 - reranking before generation
 - grounded answers with citations
-- frontend, API, tests, and Docker deployment
-
-That makes it useful as a portfolio project for applied AI engineering, RAG systems, backend development, and product-minded ML work.
+- API, frontend, tests, and Docker deployment
 
 ## 🏗️ Architecture
 
@@ -215,7 +213,7 @@ npm test
 npm run build
 ```
 
-## 🗺️ Roadmap
+## 🗺️ Scope And Roadmap
 
 - OCR for scanned PDFs and images
 - DOCX, PNG, and JPG ingestion
@@ -223,9 +221,3 @@ npm run build
 - stronger multilingual embeddings
 - document viewer with page-level highlights
 - evaluation benchmark for retrieval, QA, and extraction
-
-## 💼 Resume Summary
-
-> Built a production-style AI document analysis platform with FastAPI, React, Qdrant, hybrid retrieval, grounded QA with citations, LLM-assisted summaries, Docker deployment, and multilingual UI support.
-
-This is a compact but honest way to describe the project: it highlights the AI pipeline, product surface, and engineering practices without overselling the MVP.

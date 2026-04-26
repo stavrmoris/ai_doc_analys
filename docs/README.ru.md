@@ -8,7 +8,7 @@
 
 **Язык:** [English](../README.md) | Русский | [中文](README.zh.md)
 
-AI Document Analyst — это MVP документно-аналитической платформы: сервис загружает документы, разбирает их на фрагменты, ищет по смыслу, отвечает на вопросы с цитатами и делает summary.
+AI Document Analyst — это сервис для анализа документов: загрузка файлов, индексация содержимого, поиск релевантных фрагментов, ответы на вопросы с цитатами и summary.
 
 ![AI Document Analyst dashboard](assets/dashboard-screenshot.png)
 
@@ -23,9 +23,9 @@ AI Document Analyst — это MVP документно-аналитическо
 - 🗑️ удаление документов из UI, базы и vector store
 - 🐳 запуск через Docker Compose
 
-## 🧭 Суть проекта
+## 🧭 Обзор
 
-Это не просто “чат с PDF”. Проект показывает полноценный AI pipeline для документов:
+Приложение собрано как документный AI pipeline:
 
 - ingestion
 - parsing
@@ -36,10 +36,8 @@ AI Document Analyst — это MVP документно-аналитическо
 - reranking
 - grounded QA
 - summarization
-- frontend demo
+- frontend
 - tests and Docker deployment
-
-Такой проект хорошо выглядит в портфолио, потому что демонстрирует не только работу с LLM, но и инженерную архитектуру вокруг Retrieval-Augmented Generation.
 
 ## 🏗️ Архитектура
 
@@ -111,7 +109,3 @@ BACKEND_PORT=18000 FRONTEND_PORT=15173 docker compose up --build
 5. Сгенерировать short и detailed summary.
 6. Переключить язык интерфейса.
 7. Удалить тестовый документ.
-
-## 💼 Формулировка для резюме
-
-> Built a production-style AI document analysis platform with FastAPI, React, Qdrant, hybrid retrieval, grounded QA with citations, LLM-assisted summaries, Docker deployment, and multilingual UI support.
