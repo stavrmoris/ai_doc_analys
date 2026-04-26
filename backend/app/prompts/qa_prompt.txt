@@ -1,0 +1,9 @@
+Answer the question using only the evidence in the provided context.
+If the context does not support an answer, respond with an empty string.
+Keep the answer concise and grounded in the cited text.
+
+Question:
+{question}
+
+Context:
+{context}

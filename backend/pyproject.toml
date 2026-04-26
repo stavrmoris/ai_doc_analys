@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-document-analyst-backend"
+version = "0.1.0"
+description = "Backend for the AI Document Analyst MVP"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "pydantic-settings>=2.6,<3",
+  "python-multipart>=0.0.20,<1",
+  "pymupdf>=1.24,<2",
+  "qdrant-client>=1.17,<1.18",
+  "snowballstemmer>=2.2,<3",
+  "sqlalchemy>=2,<3",
+  "uvicorn[standard]>=0.30,<1",
+]
+
+[project.optional-dependencies]
+ml = [
+  "sentence-transformers>=3,<4",
+]
+test = [
+  "pytest>=8,<9",
+  "httpx>=0.27,<1",
+]
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
